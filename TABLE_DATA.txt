@@ -1,0 +1,297 @@
+2. Write queries to retrieve and print all the data you entered.
+
+mysql> SELECT * FROM STAFF_MEMBER;
++--------------------+-------------+----------------------+
+| NAME               | S_SSN       | DESIGNATION          |
++--------------------+-------------+----------------------+
+| Ronalda Scarfe     | 122-88-8675 | CHECK_OUT_STAFF      |
+| Bevan Ohrt         | 152-40-3784 | CHECK_OUT_STAFF      |
+| Gerti Laight       | 168-68-1834 | CHECK_OUT_STAFF      |
+| Tiffani Grishukhin | 231-25-9089 | LIBRARY_ASSISTANT    |
+| Karlee McCool      | 280-64-9155 | CHECK_OUT_STAFF      |
+| Gretta Breed       | 301-07-8572 | LIBRARY_ASSISTANT    |
+| Launce Du Hamel    | 534-97-8595 | REFERENCE_LIBRARIAN  |
+| Clifford Freyne    | 536-37-0757 | REFERENCE_LIBRARIAN  |
+| Mickey Tizzard     | 576-63-5780 | REFERENCE_LIBRARIAN  |
+| Jodee Tippler      | 642-44-8444 | DEPT_ASSOC_LIBRARIAN |
+| Reiko Rumble       | 698-73-4959 | DEPT_ASSOC_LIBRARIAN |
+| Deerdre Rodriguez  | 721-95-6316 | DEPT_ASSOC_LIBRARIAN |
+| Sheeree Denyagin   | 738-04-8703 | LIBRARY_ASSISTANT    |
+| Miof mela Bringloe | 746-11-3480 | DEPT_ASSOC_LIBRARIAN |
+| Natal Klaaasen     | 778-13-2890 | REFERENCE_LIBRARIAN  |
+| Farrel Boylin      | 789-85-0211 | DEPT_ASSOC_LIBRARIAN |
+| Eulalie Byrth      | 819-90-7018 | REFERENCE_LIBRARIAN  |
+| Karyl Venour       | 828-91-7900 | LIBRARY_ASSISTANT    |
+| Ike Averies        | 848-34-2942 | LIBRARY_ASSISTANT    |
+| Victor Itzkovitch  | 854-35-0945 | CHECK_OUT_STAFF      |
++--------------------+-------------+----------------------+
+20 rows in set (0.00 sec)
+
+mysql> SELECT * FROM LIBRARY_MEMBER;
++---------------+-------------+----------------------------+-------------------------+--------------------+-------------+-----------------+-------------+------------------+----------------------------+
+| PHONE_NO      | L_SSN       | CAMPUS_ADDRESS             | HOME_ADDRESS            | NO_OF_BOOKS_ISSUED | ISPROFESSOR | MEMBERSHIP_TYPE | S_SSN       | CARD_EXPIRY_DATE | CARD_ADDRESS               |
++---------------+-------------+----------------------------+-------------------------+--------------------+-------------+-----------------+-------------+------------------+----------------------------+
+| (478) 3934983 | 105-06-2861 |  '31, Mav Place'           | 94101 Nova Way          |                  2 |           0 | STUDENT         | 280-64-9155 | 2014-03-12       |  '31, Mav Place'           |
+| (141) 3438549 | 123-15-5063 |  '19, Mav Place'           | 43 Randy Road           |                  5 |           1 | FACULTY         | 280-64-9155 | 2014-04-02       |  '19, Mav Place'           |
+| (936) 9926430 | 195-94-4782 |  '387, Mav Place'          | 1079 Ryan Trail         |                  5 |           0 | STUDENT         | 122-88-8675 | 2014-04-18       |  '387, Mav Place'          |
+| (172) 9308407 | 210-38-7975 |  '11, Meadow Run'          | 94381 Myrtle Circle     |                  5 |           0 | STUDENT         | 280-64-9155 | 2014-04-15       |  '11, Meadow Run'          |
+| (274) 7190728 | 216-47-2595 |  '57, University Village'  | 1 Harper Lane           |                  1 |           0 | STUDENT         | 122-88-8675 | 2014-03-20       |  '57, University Village'  |
+| (129) 2444474 | 337-94-5230 |  '25, Arbor Oaks'          | 91757 Crownhardt Lane   |                  1 |           0 | STUDENT         | 168-68-1834 | 2014-04-02       |  '25, Arbor Oaks'          |
+| (520) 1920108 | 405-82-7419 |  '690, Arbor Oaks'         | 7 Logan Avenue          |                  2 |           0 | STUDENT         | 122-88-8675 | 2014-03-09       |  '690, Arbor Oaks'         |
+| (193) 9208948 | 480-52-9601 |  '850, Arbor Oaks'         | 359 Corry Crossing      |                  2 |           0 | STUDENT         | 854-35-0945 | 2014-04-18       |  '850, Arbor Oaks'         |
+| (775) 4686682 | 533-61-0717 |  '10, Mav Place'           | 37 Hanson Way           |                  1 |           1 | FACULTY         | 854-35-0945 | 2014-03-20       |  '10, Mav Place'           |
+| (956) 3890303 | 592-36-7336 |  '43, Mav Place'           | 3 Ohio Plaza            |                  1 |           1 | FACULTY         | 854-35-0945 | 2014-04-04       |  '43, Mav Place'           |
+| (672) 4028966 | 594-22-0221 |  '237, Arbor Oaks'         | 391 Pleasure Trail      |                  1 |           1 | FACULTY         | 122-88-8675 | 2014-03-09       |  '237, Arbor Oaks'         |
+| (722) 5162256 | 605-97-0452 |  '319, Mav Place'          | 00705 Upham Avenue      |                  2 |           0 | STUDENT         | 280-64-9155 | 2014-04-04       |  '319, Mav Place'          |
+| (123) 4477830 | 622-23-8023 |  '105, University Village' | 30207 Bashford Crossing |                  1 |           1 | FACULTY         | 854-35-0945 | 2014-03-04       |  '105, University Village' |
+| (898) 6252784 | 643-10-4126 |  '976, Meadow Run'         | 80 Boyd Avenue          |                  1 |           0 | STUDENT         | 168-68-1834 | 2014-04-07       |  '976, Meadow Run'         |
+| (237) 1249116 | 695-38-5520 |  '701, Meadow Run'         | 8 Tony Avenue           |                  1 |           0 | STUDENT         | 280-64-9155 | 2014-04-15       |  '701, Meadow Run'         |
+| (766) 7839841 | 727-38-4898 |  '1101, Meadow Run'        | 703 Rieder Street       |                  3 |           0 | STUDENT         | 152-40-3784 | 2014-03-04       |  '1101, Meadow Run'        |
+| (433) 2813724 | 762-77-2926 |  '75, University Village'  | 278 Northland Lane      |                  3 |           0 | STUDENT         | 152-40-3784 | 2014-04-08       |  '75, University Village'  |
+| (203) 6141432 | 794-96-6758 |  '575, University Village' | 1 Surrey Point          |                  2 |           1 | FACULTY         | 152-40-3784 | 2014-03-12       |  '575, University Village' |
+| (731) 2673618 | 827-47-3115 |  '600, Arbor Oaks'         | 62735 Surrey Pass       |                  1 |           0 | STUDENT         | 168-68-1834 | 2014-04-07       |  '600, Arbor Oaks'         |
++---------------+-------------+----------------------------+-------------------------+--------------------+-------------+-----------------+-------------+------------------+----------------------------+
+19 rows in set (0.00 sec)
+
+mysql> SELECT * FROM BOOK;
++------------------------+----------------------+---------------------------------+------------+----------+-------------+------------+
+| AUTHOR                 | SUBJECT              | TITLE                           | BIND       | LANGUAGE | ISBN        | IN_LIBRARY |
++------------------------+----------------------+---------------------------------+------------+----------+-------------+------------+
+| Malchy Rickell         | COMPUTER NETWORKS    | ADVANCED COMPUTER NETWORKS      | HARDCOVER  | English  | 512224490-1 |          1 |
+| Laughton Gaffney       | DATABASE SYSTEMS     | ADVANCED DB                     | HARDCOVER  | English  | 346736886-7 |          0 |
+| Bevvy Creddon          | ENGLISH              | ADVANCED ENGLISH GRAMMAR        | HARDCOVER  | English  | 839470193-0 |          0 |
+| Lois Owens             | MATHEMATICS          | ALGEBRA FOR BEGINNERS           | SOFTCOVER  | English  | 491938707-5 |          1 |
+| Tades Wimms            | BIOLOGY              | ANATOMY AND DISSECTION          | SOFTCOVER  | English  | 809874907-X |          0 |
+| Bernard Pavel          | SOFTWARE ENGINEERING | BECOME A MANAGER                | HARDCOVER  | English  | 780279196-0 |          0 |
+| Tabbitha Hullins       | BIOLOGY              | BODY AND ITS FUNDAMENTALS       | SOFTCOVER  | English  | 498232724-6 |          1 |
+| Alina Castellaccio     | MATHEMATICS          | CALCULUS BASICS                 | SOFTCOVER  | English  | 771409744-2 |          1 |
+| Mallorie Reidshaw      | ELECTRONICS          | CIRCUITS AND CONNECTIONS        | SOFTCOVER  | English  | 516733096-3 |          1 |
+| Ellie Chesley          | COMPUTER NETWORKS    | COMPUTER NETWORKS BEGINNERS     | HARDCOVER  | English  | 050194029-4 |          1 |
+| Rozella Woolstenholmes | DATABASE SYSTEMS     | DATA ADVANCED                   | HARDCOVER  | English  | 220798159-2 |          1 |
+| Jessamine Sunnex       | DATA MINING          | DATA MINING EDITION I           | SOFTCOVER  | English  | 038046991-X |          1 |
+| Camilla Duer           | DATA MINING          | DISCOVER DATA                   | HARDCOVER  | English  | 987781279-7 |          0 |
+| Alexandr Merill        | PHYSICS              | DISCOVER PHYSICS                | HARDCOVER  | English  | 669944468-9 |          0 |
+| Kristine Bischof       | ELECTRONICS          | ELECTRONICS AND MORE            | SOFTCOVER  | English  | 600986245-0 |          1 |
+| Alwyn Leeson           | ENGLISH              | ENGLISH FOR PRO                 | HARDCOVER  | English  | 153935573-X |          0 |
+| Gena Mosdill           | ENGLISH              | ENGLISH GRAMMAR                 | HARDCOVER  | English  | 631902799-1 |          0 |
+| Devin Gerring          | FILE STRUCTURES      | FILE STRUCTURES                 | HARDCOVER  | English  | 672491373-X |          0 |
+| Emalia Van Halle       | DATABASE SYSTEMS     | FUNDAMENTALS OF DATA            | HARDCOVER  | English  | 879967795-4 |          0 |
+| Garner Helder          | DATA STRUCTURES      | FUNDAMENTALS OF DATA STRUCTURES | HARDCOVER  | English  | 262770473-7 |          0 |
+| Jasen Filisov          | GEOGRAPHY            | GEOGRAPHY AND BEYOND            | SOFTCOVER  | English  | 848474862-6 |          1 |
+| Barrie McAreavey       | MATHEMATICS          | GEOMETRY ADVANCED               | HARDCOVER  | English  | 122806840-2 |          1 |
+| Kayne Nannoni          | ENGLISH              | GULMOHAR LITERATURE             | SOFTCOVER  | English  | 350463220-8 |          0 |
+| Chelsae Mattimoe       | PHYSICS              | INTRO TO PHYSICS                | HARDCOVER  | English  | 015397168-1 |          1 |
+| Katina Reuss           | MATHEMATICS          | MATHS BASICS                    | SOFTCOVER  | English  | 947147484-1 |          1 |
+| Malynda Najera         | DATA MINING          | SKILLS OF DATA MINING           | SOFTCOVER  | English  | 861398807-5 |          0 |
+| Alonzo Veale           | SOFTWARE ENGINEERING | SOFTWARE ENGINEERING I          | SOFTCOVER  | English  | 921170689-0 |          1 |
+| Marianne Connikie      | SOFTWARE TESTING     | TEST LIKE A PRO                 | SOFTCOVER  | English  | 655059205-4 |          1 |
+| Carita Manning         | SOFTWARE TESTING     | TESTING FOR BEGINNERS           | SOFTCOVER  | English  | 553683744-3 |          1 |
+| Kristi Claypoole       | DATA STRUCTURES      | TREES AND ORDERING              | SOFTCOVER  | English  | 705817047-9 |          0 |
++------------------------+----------------------+---------------------------------+------------+----------+-------------+------------+
+30 rows in set (0.00 sec)
+
+mysql> SELECT * FROM ISSUE_NOTICE;
++-------------+-------------+-----------------------------+
+| S_SSN       | L_SSN       | ADDRESS                     |
++-------------+-------------+-----------------------------+
+| 122-88-8675 | 195-94-4782 |   '387, Mav Place'          |
+| 122-88-8675 | 216-47-2595 |   '57, University Village'  |
+| 122-88-8675 | 405-82-7419 |   '690, Arbor Oaks'         |
+| 122-88-8675 | 594-22-0221 |   '237, Arbor Oaks'         |
+| 152-40-3784 | 727-38-4898 |   '1101, Meadow Run'        |
+| 152-40-3784 | 762-77-2926 |   '75, University Village'  |
+| 152-40-3784 | 794-96-6758 |   '575, University Village' |
+| 168-68-1834 | 337-94-5230 |   '25, Arbor Oaks'          |
+| 168-68-1834 | 643-10-4126 |   '976, Meadow Run'         |
+| 168-68-1834 | 827-47-3115 |   '600, Arbor Oaks'         |
+| 280-64-9155 | 105-06-2861 |   '31, Mav Place'           |
+| 280-64-9155 | 123-15-5063 |   '19, Mav Place'           |
+| 280-64-9155 | 210-38-7975 |   '11, Meadow Run'          |
+| 280-64-9155 | 605-97-0452 |   '319, Mav Place'          |
+| 280-64-9155 | 695-38-5520 |   '701, Meadow Run'         |
+| 854-35-0945 | 480-52-9601 |   '850, Arbor Oaks'         |
+| 854-35-0945 | 533-61-0717 |   '10, Mav Place'           |
+| 854-35-0945 | 592-36-7336 |   '43, Mav Place'           |
+| 854-35-0945 | 622-23-8023 |   '105, University Village' |
++-------------+-------------+-----------------------------+
+19 rows in set (0.00 sec)
+
+mysql> SELECT * FROM ISSUE_BOOK;
++-----------------------------+------------+----------+-------------+-------------+-------------+-------------------+--------------+--------------+------------+
+| TITLE                       | BIND       | LANGUAGE | ISBN        | S_SSN       | L_SSN       | NOTIFICATION_DATE | GRACE_PERIOD | ISSUE_PERIOD | ISSUE_DATE |
++-----------------------------+------------+----------+-------------+-------------+-------------+-------------------+--------------+--------------+------------+
+| ALGEBRA FOR BEGINNERS       | SOFTCOVER  | English  | 491938707-5 | 280-64-9155 | 643-10-4126 | 2015-04-19        | 7            | 5            | 2015-03-12 |
+| BODY AND ITS FUNDAMENTALS   | SOFTCOVER  | English  | 498232724-6 | 152-40-3784 | 210-38-7975 | 2015-05-15        | 7            | 21           | 2015-04-08 |
+| CALCULUS BASICS             | SOFTCOVER  | English  | 771409744-2 | 854-35-0945 | 405-82-7419 | 2015-05-05        | 7            | 10           | 2015-04-04 |
+| COMPUTER NETWORKS BEGINNERS | HARDCOVER  | English  | 050194029-4 | 854-35-0945 | 105-06-2861 | 2015-05-25        | 7            | 20           | 2015-04-18 |
+| DATA MINING EDITION I       | SOFTCOVER  | English  | 038046991-X | 122-88-8675 | 762-77-2926 | 2015-04-16        | 7            | 21           | 2015-03-09 |
+| ELECTRONICS AND MORE        | SOFTCOVER  | English  | 600986245-0 | 280-64-9155 | 216-47-2595 | 2015-05-22        | 7            | 20           | 2015-04-15 |
+| GEOGRAPHY AND BEYOND        | SOFTCOVER  | English  | 848474862-6 | 280-64-9155 | 727-38-4898 | 2015-05-09        | 7            | 1            | 2015-04-02 |
+| GEOMETRY ADVANCED           | HARDCOVER  | English  | 122806840-2 | 152-40-3784 | 480-52-9601 | 2015-04-11        | 7            | 13           | 2015-03-04 |
+| INTRO TO PHYSICS            | HARDCOVER  | English  | 015397168-1 | 168-68-1834 | 592-36-7336 | 2015-05-14        | 7            | 12           | 2015-04-07 |
+| TESTING FOR BEGINNERS       | SOFTCOVER  | English  | 553683744-3 | 122-88-8675 | 123-15-5063 | 2015-04-27        | 7            | 6            | 2015-03-20 |
++-----------------------------+------------+----------+-------------+-------------+-------------+-------------------+--------------+--------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT * FROM DEPT_ASSOC_LIBRARIAN;
++-------------+-----------+
+| S_SSN       | DEPT      |
++-------------+-----------+
+| 642-44-8444 | RESEARCH  |
+| 698-73-4959 | REFERENCE |
+| 721-95-6316 | RESEARCH  |
+| 746-11-3480 | REFERENCE |
+| 789-85-0211 | REFERENCE |
++-------------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM LIBRARY_ASSISTANT;
++-------------+-------------------------------+
+| S_SSN       | DUTIES                        |
++-------------+-------------------------------+
+| 231-25-9089 | Data Entry                    |
+| 301-07-8572 | Keeping track of issued books |
+| 738-04-8703 | Book Assortment               |
+| 828-91-7900 | Sorting returned books        |
+| 848-34-2942 | Book Assortment               |
++-------------+-------------------------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM REFERENCE_LIBRARIAN;
++-------------+-----------+
+| S_SSN       | DEPT      |
++-------------+-----------+
+| 534-97-8595 | REFERENCE |
+| 536-37-0757 | RESEARCH  |
+| 576-63-5780 | REFERENCE |
+| 778-13-2890 | RESEARCH  |
+| 819-90-7018 | REFERENCE |
++-------------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM CHECK_OUT_STAFF;
++-------------+---------+
+| S_SSN       | WRK_HRS |
++-------------+---------+
+| 122-88-8675 | 15      |
+| 152-40-3784 | 10      |
+| 168-68-1834 | 9       |
+| 280-64-9155 | 10      |
+| 854-35-0945 | 10      |
++-------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM WANTED;
++---------------------------------+------------+----------+-------------+----------------+
+| TITLE                           | BIND       | LANGUAGE | ISBN        | IN_PUBLICATION |
++---------------------------------+------------+----------+-------------+----------------+
+| ADVANCED DB                     | HARDCOVER  | English  | 346736886-7 | TRUE           |
+| ADVANCED ENGLISH GRAMMAR        | HARDCOVER  | English  | 839470193-0 | TRUE           |
+| ANATOMY AND DISSECTION          | SOFTCOVER  | English  | 809874907-X | TRUE           |
+| BECOME A MANAGER                | HARDCOVER  | English  | 780279196-0 | FALSE          |
+| DISCOVER DATA                   | HARDCOVER  | English  | 987781279-7 | FALSE          |
+| DISCOVER PHYSICS                | HARDCOVER  | English  | 669944468-9 | TRUE           |
+| ENGLISH FOR PRO                 | HARDCOVER  | English  | 153935573-X | TRUE           |
+| ENGLISH GRAMMAR                 | HARDCOVER  | English  | 631902799-1 | TRUE           |
+| FILE STRUCTURES                 | HARDCOVER  | English  | 672491373-X | FALSE          |
+| FUNDAMENTALS OF DATA            | HARDCOVER  | English  | 879967795-4 | TRUE           |
+| FUNDAMENTALS OF DATA STRUCTURES | HARDCOVER  | English  | 262770473-7 | FALSE          |
+| GULMOHAR LITERATURE             | SOFTCOVER  | English  | 350463220-8 | TRUE           |
+| SKILLS OF DATA MINING           | SOFTCOVER  | English  | 861398807-5 | FALSE          |
+| TREES AND ORDERING              | SOFTCOVER  | English  | 705817047-9 | TRUE           |
++---------------------------------+------------+----------+-------------+----------------+
+14 rows in set (0.00 sec)
+
+mysql> SELECT * FROM CATALOG;
++---------------------------------+------------+----------+-------------+------------------------------------------+--------------+----------+---------------+---------------+
+| TITLE                           | BIND       | LANGUAGE | ISBN        | BOOK_DESCRIPTION                         | NO_OF_COPIES | CAN_RENT | TYPE_OF_BOOK  | RENTED_COPIES |
++---------------------------------+------------+----------+-------------+------------------------------------------+--------------+----------+---------------+---------------+
+| ADVANCED COMPUTER NETWORKS      | HARDCOVER  | English  | 512224490-1 | detailed computer networks concept       |            4 |        1 | CAN RENT      |             2 |
+| ADVANCED DB                     | HARDCOVER  | English  | 346736886-7 | database systems explained               |            4 |        0 | REFERENCE     |             0 |
+| ADVANCED ENGLISH GRAMMAR        | HARDCOVER  | English  | 839470193-0 | english grammar concepts                 |            3 |        0 | REFERENCE     |             0 |
+| ALGEBRA FOR BEGINNERS           | SOFTCOVER  | English  | 491938707-5 | basics of algebra                        |            5 |        1 | CAN RENT      |             3 |
+| ANATOMY AND DISSECTION          | SOFTCOVER  | English  | 809874907-X | animal anatomy concepts                  |            5 |        0 | RARE          |             2 |
+| BECOME A MANAGER                | HARDCOVER  | English  | 780279196-0 | software engineering concepts            |            3 |        0 | REFERENCE     |             1 |
+| BODY AND ITS FUNDAMENTALS       | SOFTCOVER  | English  | 498232724-6 | basics of human anatomy                  |            1 |        1 | CAN RENT      |             3 |
+| CALCULUS BASICS                 | SOFTCOVER  | English  | 771409744-2 | trignometry and differentiation concepts |            6 |        1 | CAN RENT      |             2 |
+| CIRCUITS AND CONNECTIONS        | SOFTCOVER  | English  | 516733096-3 | electronics  circuits concepts           |            2 |        1 | CAN RENT      |             1 |
+| COMPUTER NETWORKS BEGINNERS     | HARDCOVER  | English  | 050194029-4 | computer networks text book              |            2 |        1 | CAN RENT      |             1 |
+| DATA ADVANCED                   | HARDCOVER  | English  | 220798159-2 | about normalisation                      |            3 |        1 | CAN RENT      |             1 |
+| DATA MINING EDITION I           | SOFTCOVER  | English  | 038046991-X | data mining techniques                   |            3 |        1 | CAN RENT      |             1 |
+| DISCOVER DATA                   | HARDCOVER  | English  | 987781279-7 | data mining techniques                   |            5 |        0 | REFERENCE     |             0 |
+| DISCOVER PHYSICS                | HARDCOVER  | English  | 669944468-9 | concepts of physics                      |            3 |        0 | REFERENCE     |             0 |
+| ELECTRONICS AND MORE            | SOFTCOVER  | English  | 600986245-0 | electronics concepts                     |            2 |        1 | CAN RENT      |             1 |
+| ENGLISH FOR PRO                 | HARDCOVER  | English  | 153935573-X | english grammar concepts                 |            2 |        0 | REFERENCE     |             0 |
+| ENGLISH GRAMMAR                 | HARDCOVER  | English  | 631902799-1 | english grammar in detail                |            4 |        0 | REFERENCE     |             0 |
+| FILE STRUCTURES                 | HARDCOVER  | English  | 672491373-X | program explanations                     |            1 |        0 | RARE          |             0 |
+| FUNDAMENTALS OF DATA            | HARDCOVER  | English  | 879967795-4 | database systems explained               |            3 |        0 | REFERENCE     |             0 |
+| FUNDAMENTALS OF DATA STRUCTURES | HARDCOVER  | English  | 262770473-7 | data structure concepts                  |            6 |        0 | REFERENCE     |             0 |
+| GEOGRAPHY AND BEYOND            | SOFTCOVER  | English  | 848474862-6 | maps                                     |            2 |        1 | MAPS          |             0 |
+| GEOMETRY ADVANCED               | HARDCOVER  | English  | 122806840-2 | geometric concepts                       |            2 |        1 | CAN RENT      |             1 |
+| GULMOHAR LITERATURE             | SOFTCOVER  | English  | 350463220-8 | book of stories and poems                |            0 |        0 | TO BE AQUIRED |             0 |
+| INTRO TO PHYSICS                | HARDCOVER  | English  | 015397168-1 | basics of physics                        |            5 |        1 | CAN RENT      |             1 |
+| MATHS BASICS                    | SOFTCOVER  | English  | 947147484-1 | arithmetic concepts                      |            8 |        1 | CAN RENT      |             3 |
+| SKILLS OF DATA MINING           | SOFTCOVER  | English  | 861398807-5 | data mining techniques                   |            5 |        0 | RARE          |             3 |
+| SOFTWARE ENGINEERING I          | SOFTCOVER  | English  | 921170689-0 | understanding process models             |            2 |        1 | CAN RENT      |             1 |
+| TEST LIKE A PRO                 | SOFTCOVER  | English  | 655059205-4 | testing concepts                         |            1 |        1 | CAN RENT      |             0 |
+| TESTING FOR BEGINNERS           | SOFTCOVER  | English  | 553683744-3 | software  testing                        |            2 |        1 | CAN RENT      |             1 |
+| TREES AND ORDERING              | SOFTCOVER  | English  | 705817047-9 | binary trees and more                    |            1 |        0 | REFERENCE     |             0 |
++---------------------------------+------------+----------+-------------+------------------------------------------+--------------+----------+---------------+---------------+
+30 rows in set (0.00 sec)
+
+mysql> SELECT * FROM GET_DESCRIPTION;
++---------------------------------+------------+----------+-------------+-------------+
+| TITLE                           | BIND       | LANGUAGE | ISBN        | S_SSN       |
++---------------------------------+------------+----------+-------------+-------------+
+| BECOME A MANAGER                | HARDCOVER  | English  | 780279196-0 | 534-97-8595 |
+| CIRCUITS AND CONNECTIONS        | SOFTCOVER  | English  | 516733096-3 | 534-97-8595 |
+| COMPUTER NETWORKS BEGINNERS     | HARDCOVER  | English  | 050194029-4 | 534-97-8595 |
+| DATA MINING EDITION I           | SOFTCOVER  | English  | 038046991-X | 534-97-8595 |
+| GEOMETRY ADVANCED               | HARDCOVER  | English  | 122806840-2 | 534-97-8595 |
+| TESTING FOR BEGINNERS           | SOFTCOVER  | English  | 553683744-3 | 534-97-8595 |
+| BODY AND ITS FUNDAMENTALS       | SOFTCOVER  | English  | 498232724-6 | 536-37-0757 |
+| ENGLISH FOR PRO                 | HARDCOVER  | English  | 153935573-X | 536-37-0757 |
+| ENGLISH GRAMMAR                 | HARDCOVER  | English  | 631902799-1 | 536-37-0757 |
+| FILE STRUCTURES                 | HARDCOVER  | English  | 672491373-X | 536-37-0757 |
+| GEOGRAPHY AND BEYOND            | SOFTCOVER  | English  | 848474862-6 | 536-37-0757 |
+| TREES AND ORDERING              | SOFTCOVER  | English  | 705817047-9 | 536-37-0757 |
+| ADVANCED COMPUTER NETWORKS      | HARDCOVER  | English  | 512224490-1 | 576-63-5780 |
+| DISCOVER PHYSICS                | HARDCOVER  | English  | 669944468-9 | 576-63-5780 |
+| FUNDAMENTALS OF DATA STRUCTURES | HARDCOVER  | English  | 262770473-7 | 576-63-5780 |
+| GULMOHAR LITERATURE             | SOFTCOVER  | English  | 350463220-8 | 576-63-5780 |
+| INTRO TO PHYSICS                | HARDCOVER  | English  | 015397168-1 | 576-63-5780 |
+| TEST LIKE A PRO                 | SOFTCOVER  | English  | 655059205-4 | 576-63-5780 |
+| ADVANCED DB                     | HARDCOVER  | English  | 346736886-7 | 778-13-2890 |
+| ALGEBRA FOR BEGINNERS           | SOFTCOVER  | English  | 491938707-5 | 778-13-2890 |
+| ELECTRONICS AND MORE            | SOFTCOVER  | English  | 600986245-0 | 778-13-2890 |
+| FUNDAMENTALS OF DATA            | HARDCOVER  | English  | 879967795-4 | 778-13-2890 |
+| SKILLS OF DATA MINING           | SOFTCOVER  | English  | 861398807-5 | 778-13-2890 |
+| SOFTWARE ENGINEERING I          | SOFTCOVER  | English  | 921170689-0 | 778-13-2890 |
+| ADVANCED ENGLISH GRAMMAR        | HARDCOVER  | English  | 839470193-0 | 819-90-7018 |
+| ANATOMY AND DISSECTION          | SOFTCOVER  | English  | 809874907-X | 819-90-7018 |
+| CALCULUS BASICS                 | SOFTCOVER  | English  | 771409744-2 | 819-90-7018 |
+| DATA ADVANCED                   | HARDCOVER  | English  | 220798159-2 | 819-90-7018 |
+| DISCOVER DATA                   | HARDCOVER  | English  | 987781279-7 | 819-90-7018 |
+| MATHS BASICS                    | SOFTCOVER  | English  | 947147484-1 | 819-90-7018 |
++---------------------------------+------------+----------+-------------+-------------+
+30 rows in set (0.00 sec)
+
+
+3. Write a query that will prepare a report for weekly Borrowing activity by Subject area, 
+by Author, number of copies and number of days loaned out.
+
+mysql> select b.subject,b.author,c.rented_copies,i.issue_period
+    -> from book as b, issue_book as i, catalog as c 
+    -> where issue_date BETWEEN '2015-03-09' AND '2015-03-16'
+    -> AND i.title=b.title AND i.bind=b.bind AND i.language=b.language AND i.isbn=b.isbn
+    -> AND c.title=b.title AND c.bind=b.bind AND c.language=b.language AND c.isbn=b.isbn
+    -> GROUP BY b.subject,b.author;
++--------------+------------------+---------------+--------------+
+| subject      | author           | rented_copies | issue_period |
++--------------+------------------+---------------+--------------+
+| MATHEMATICS  | Lois Owens       |             3 | 5            |
+| DATA MINING  | Jessamine Sunnex |             1 | 21           |
++--------------+------------------+---------------+--------------+
+2 rows in set (0.01 sec)
+
+mysql> notee;
